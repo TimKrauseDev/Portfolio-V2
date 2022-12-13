@@ -1,0 +1,32 @@
+form {
+
+	input, textarea {
+		display: block;
+		border: 3px solid #000;
+		padding: 10px 5px;
+		width: 100%;
+		font-family: $inter;
+
+		&:focus { @include focus();	}
+	}
+
+	label {
+		display: block;
+		font-weight: 700;
+		margin-bottom: 10px;
+		margin-top: $gap;
+	}
+
+	.btn { 
+		margin: $gap 0; 
+		width: auto; 
+	}
+
+	.alert {
+		margin: 5px 0;
+		color: $color-orange;
+		font-weight: 700;
+		@include font-size(12);
+		@include line-height(20);
+	}
+}

@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Muller';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("Muller-Bold.ttf") format("ttf")
+}

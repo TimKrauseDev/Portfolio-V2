@@ -1,0 +1,141 @@
+@use "sass:math";
+
+
+
+/*
+--------------------------------------------------------------------------
+FONT/TYPOGRAPGHY
+--------------------------------------------------------------------------
+*/
+
+@mixin font-size ($size) {
+  $remValue: math.div($size, 16);
+  $pxValue: ($size);
+  font-size: $pxValue + px;
+  font-size: $remValue + rem;
+}
+
+
+@mixin line-height ($size: null) {
+	@if $size{
+		$remValue: math.div($size, 16);
+		$pxValue: ($size);
+		line-height: $pxValue + px;
+		line-height: $remValue + rem;
+	}
+	@else{
+		line-height: 1.75;
+	}
+}
+
+/*
+--------------------------------------------------------------------------
+TRANSITIONS
+--------------------------------------------------------------------------
+*/
+
+/*Opacity*/
+@mixin fade(){
+	transition: opacity 0.30s ease-in-out;
+}
+/*Color*/
+@mixin color(){
+	transition: color 0.30s ease-in-out;
+}
+/*Background Color*/
+@mixin bg-color(){
+	transition: background-color 0.30s ease-in-out;
+}
+/*Border*/
+@mixin border(){
+	transition: border 0.30s ease-in-out, color 0.30s ease-in-out;
+}
+/*outline*/
+@mixin outline(){
+	transition: outline 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+/*Used for links. border, color, background color, fill, box shadows*/
+@mixin link(){
+	transition: border 0.30s ease-in-out, color 0.30s ease-in-out, background-color 0.30s ease-in-out, fill 0.30s ease-in-out, box-shadow 0.30s ease-in-out;
+}
+/*Boxshadow*/
+@mixin boxshadow(){
+	transition: box-shadow 0.30s ease-in-out;
+}
+/*Margins*/
+@mixin margin(){
+	transition: margin .30s ease-in-out;
+}
+/*Height*/
+@mixin height(){
+	transition: height .30s ease-in-out;
+}
+/*Width*/
+@mixin width(){
+	transition: width .30s ease-in-out;
+}
+/*For all transitions*/
+@mixin all(){
+	transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-webkit-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+}
+
+
+/*
+--------------------------------------------------------------------------
+FOCUS
+--------------------------------------------------------------------------
+*/
+
+@mixin focus{
+	box-shadow: 0 0 0 0.2rem $color-green-500;
+	-webkit-box-shadow: 0 0 0 0.2rem $color-green-500;
+	outline: none;
+}
+
+/*
+--------------------------------------------------------------------------
+MEDIA BREAKPOINTS
+--------------------------------------------------------------------------
+*/
+
+@mixin responsive($bp) {
+	@if $bp == lg {
+		@media only screen and (min-width: $large-breakpoint) and (max-width: $main-breakpoint) { @content ; }
+	}
+	@else if $bp == md {
+		@media only screen and (min-width: $medium-breakpoint) and (max-width: $large-breakpoint) { @content ; }
+	}
+	@else if $bp == mobile {
+		@media only screen and (max-width: $mobile-breakpoint) { @content ; }
+	}
+}
+
+
+@mixin responsiveSelfBelow($bp) {
+	@if $bp == lg {
+		@media only screen and (max-width: $main-breakpoint) { @content ; }
+	}
+	@else if $bp == md {
+		@media only screen and (max-width: $large-breakpoint) { @content ; }
+	}
+	@else if $bp == mobile {
+		@media only screen and (max-width: $mobile-breakpoint) { @content ; }
+	}
+}
+
+
+@mixin responsiveBelow($maxWidth){
+    @media only screen and (max-width: $maxWidth) { @content ; }
+}
+
+@mixin responsiveAbove($minWidth){
+    @media only screen and (min-width: $minWidth) { @content ; }
+}
+
+@mixin responsiveBetween($minWidth, $maxWidth) {
+	@media only screen and (min-width: $minWidth) and (max-width: $maxWidth) { @content ; }
+}

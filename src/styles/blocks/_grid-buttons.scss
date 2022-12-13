@@ -1,0 +1,95 @@
+.grid-button { 
+	background-color: $color-black;
+	transition: scale .3s;
+	position: relative;
+	padding: 0;
+	border: 0;
+	margin: 0;
+	border-radius: 10px;
+	text-transform: none;
+
+	.float-number {
+		display: block;
+		position: absolute;
+		top: 15px;
+		left: 15px;
+	}
+
+	&:focus {
+		@include focus();
+	}
+
+	&:hover {
+		background-color: transparent;
+		color: $color-black;
+	}
+}
+
+// grid-area: row-start / col-start / row-end / col-end
+.grid-button--1  { 
+	grid-area: 1 / 1 / 60 / 50;
+
+	@include responsiveBelow(1025px) {
+		grid-area: grid-1;
+	}
+}
+.grid-button--2  { 
+	// grid-area: 1 / 50 / 30 / 75; 
+	grid-area: 1 / 50 / 30 / 75; 
+	@include responsiveBelow(1025px) {
+		grid-area: grid-2;
+		
+	}
+} 
+.grid-button--3  { 
+	display: none;
+	// grid-area: 30 / 50 / 40 / 75; 
+	@include responsiveBelow(1025px) {
+		display: none;
+		grid-area: grid-3;
+	}
+} 
+.grid-button--4  { 
+	// grid-area: 40 / 50 / 60 / 75; 
+	grid-area: 30 / 50 / 60 / 75;
+	@include responsiveBelow(1025px) {
+		grid-area: grid-4;
+	}
+} 
+.grid-button--5  { 
+	grid-area: 1 / 75 / 6 / 101; 
+	@include responsiveBelow(1025px) {
+		grid-area: grid-5;
+	}
+} 
+.grid-button--7  { 
+	grid-area: 6 / 75 / 35 / 101; 
+	@include responsiveBelow(1025px) {
+		display: none;
+		grid-area: grid-7;
+	}
+} 
+.grid-button--8  { 
+	grid-area: 35 / 75 / 60 / 101; 
+	@include responsiveBelow(1025px) {
+		grid-area: grid-8;
+	}
+}
+.grid-button--9  { 
+	grid-area: 60 / 1 / 101 / 33; 
+	@include responsiveBelow(1025px) {
+		grid-area: grid-9;
+	}
+} 
+.grid-button--10 { 
+	grid-area: 60 / 33 / 101 / 67; 
+	@include responsiveBelow(1025px) {
+		grid-area: grid-10;
+	}
+} 
+.grid-button--11 { 
+	grid-area: 60 / 67 / 101 / 101; 
+	@include responsiveBelow(1025px) {
+		grid-area: grid-11;
+	}
+} 

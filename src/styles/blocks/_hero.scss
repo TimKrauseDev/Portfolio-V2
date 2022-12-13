@@ -1,0 +1,42 @@
+.hero {
+	padding: $row-gutter;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	
+	.hero-branding {
+		max-width: 100px;
+		filter: invert(1);
+	}
+}
+
+.hero-header {
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&--left {
+		
+	}
+	&--right {}
+}
+
+.date__wrapper {
+	text-align: right;
+	text-transform: lowercase;
+	p {
+		margin: 0;
+
+		&.date--time {
+			font-variant-numeric: tabular-nums;
+		}
+	}
+}
+
+.hero-content {
+	margin-top: auto;
+	h1 span { font-weight: 200; }
+}
+

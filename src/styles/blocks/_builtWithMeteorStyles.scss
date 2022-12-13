@@ -1,0 +1,260 @@
+.built-with-meteor-wrapper .Index-page-content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 100px 35px;
+
+  display: grid;
+  grid-gap: 100px;
+  grid-template-columns: 200px 1fr;
+}
+
+.built-with-meteor-wrapper .right-container {
+  background-image: radial-gradient(
+    circle farthest-corner at 50% 50%,
+    rgba(62, 56, 127, 0.45),
+    transparent
+  );
+  background-color: #222854;
+  border-radius: 25px;
+  box-shadow: 0 20px 44px 0 rgba(27, 36, 72, 0.3);
+}
+
+.built-with-meteor-wrapper {
+  .radio-label-name {
+    font-size: 16px;
+    line-height: 20px;
+    color: #9296a7;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .radio-item {
+    margin: 25px 0px;
+
+    input {
+      display: none;
+    }
+    label:hover .radio-label-name {
+      color: orange;
+    }
+  }
+
+  .radio-wrapper {
+    margin-top: 50px;
+  }
+
+  .radio-item input {
+    display: none;
+
+    + span:after {
+      content: url("../../images/logo.svg");
+      margin-left: 10px;
+      transition: all ease-in-out 0.2s;
+      opacity: 0;
+    }
+  }
+
+  input[type="radio"]:checked + span {
+    color: orange;
+
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  .view-more {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+      text-transform: uppercase;
+      margin-left: 15px;
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 700;
+    }
+  }
+}
+
+.built-with-meteor-wrapper .right-container {
+  position: relative;
+  height: 555px;
+}
+.built-with-meteor-wrapper .right-container-inner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: white;
+  height: 555px;
+  opacity: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  transition: opacity ease-in-out 0.2s;
+
+  &.active {
+    opacity: 1;
+    transition: opacity ease-in-out 0.2s;
+  }
+
+  .logo {
+    height: 45px;
+  }
+
+  .screen {
+    width: 100%;
+    border-bottom-right-radius: 25px;
+  }
+
+  .top-left {
+    padding: 35px 0px 0px 35px;
+  }
+  .top-right {
+    padding: 50px 30px 0px 0px;
+    margin-left: auto;
+
+    .btn {
+      margin: 10px;
+      font-size: 18px;
+      font-weight: 300;
+      text-transform: uppercase;
+      padding: 14px 18px;
+      border: 2px solid purple;
+      color: white;
+      border-radius: 8px;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      transition: all ease-in-out 0.2s;
+    }
+  }
+  .bottom-left {
+    padding: 0px 0px 35px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .bottom-right {
+    padding: 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
+
+.built-with-meteor-wrapper .right-container-inner {
+  .program-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    line-height: 36px;
+  }
+
+  .company-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: orange;
+    line-height: 28px;
+    padding: 17px 0px;
+  }
+
+  .description {
+    font-size: 16px;
+    font-weight: 300 !important;
+    line-height: 19px;
+    color: white;
+  }
+}
+
+.built-with-meteor-wrapper .oval-wrapper {
+  position: absolute;
+  top: 60px;
+  left: -13px;
+}
+
+@media only screen and (max-width: 900px),
+  only screen and (max-device-width: 900px) {
+  .built-with-meteor-wrapper .Index-page-content {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr;
+  }
+
+  .built-with-meteor-wrapper {
+    .radio-wrapper {
+      margin-top: 35px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .radio-item {
+      text-align: center;
+      padding: 0px 15px 20px 0px;
+      margin: 0px;
+    }
+    .radio-label-name::after {
+      display: none;
+    }
+
+    .view-more {
+      margin: 20px 0px;
+    }
+  }
+
+  .built-with-meteor-wrapper {
+    .right-container {
+      overflow: hidden;
+      height: 625px;
+    }
+
+    .right-container-inner {
+      height: 650px;
+      grid-template-rows: auto auto auto auto;
+      grid-template-columns: 1fr;
+    }
+
+    .top-right {
+      width: 100%;
+      margin: 10px 0px;
+      display: flex;
+      padding: 0px 35px !important;
+
+      .btn {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px !important;
+      }
+    }
+
+    .bottom-left {
+      padding: 0px 35px !important;
+      grid-column: span 1;
+      margin: 10px 0px;
+    }
+
+    .bottom-right {
+      padding: 0px 35px !important;
+      grid-column: span 1;
+      overflow: hidden;
+    }
+
+    .screen {
+      width: 60% !important;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+    }
+
+    .oval-wrapper {
+      display: none;
+    }
+  }
+  .built-with-meteor-wrapper .screen {
+    width: 100% !important;
+  }
+}
