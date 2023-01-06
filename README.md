@@ -1,19 +1,14 @@
 # Portfolio
 
-Source code for my [Personal Website](https://timkrause.dev/).
+Personal portfolio page to reference past pojects.
 
-<img width="600" alt="portfolio home" src="./src/images/portfolio_home.PNG">
+![App Screenshot](src/images/portfolio_home.PNG)
+## Website
 
-## Overview
+https://timkrause.dev/
 
-This portfolio is a single page website created to display my personal work.
+## Tech Stack
 
-## Technology Used
-The technology used to create this portfolio include:
-
-- React
-- SCSS
-- Bootstrap
-
+**Client:** React, Boostrap, SCSS
 ## Contact
 If you have any questions about my work or if you have any opportunities you think I would be a good fit for, please [contact me](mailto:timkrausedev@gmail.com).
