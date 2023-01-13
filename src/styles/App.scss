@@ -68,7 +68,7 @@ $color-black:					#000000;
 Fonts
 --------------------------------------------------------------------------
 */
-$inter:										'Inter', sans-serif !default; 
+$inter:										'Inter', sans-serif !default;
 $cerebri:									'Cerebri Sans Pro', sans-serif !default;
 $muller:									'Muller', sans-serif !default;
 
@@ -78,13 +78,13 @@ Helpers
 --------------------------------------------------------------------------
 */
 
-@import 
+@import
 	'layout/grid.scss',
 	'layout/grid-mobile.scss',
 	'layout/grid-medium.scss',
 	'layout/grid-large.scss',
 	'utils/mixins.scss';
-	
+
 
 /*
 --------------------------------------------------------------------------
@@ -92,12 +92,12 @@ Base / Block Imports
 --------------------------------------------------------------------------
 */
 
-@import 
+@import
 	'base/reset.scss',
 	'base/typography.scss',
 	'base/buttons.scss';
 
-@import 
+@import
 	'blocks/feature-slider.scss',
 	'blocks/hero.scss',
 	'blocks/form.scss',
@@ -139,7 +139,7 @@ main.app {
 	@include responsiveBelow(1025px) {
 		height: auto;
 		min-height: inherit;
-		
+
 	}
 }
 
@@ -167,7 +167,7 @@ main.app {
 			padding: $row-gutter;
 
 
-			grid-template-areas: 
+			grid-template-areas:
             "grid-5"
             "grid-1"
             "grid-4"
@@ -201,7 +201,7 @@ main.app {
 	border-radius: 10px;
 	overflow: hidden;
 
-	img { 
+	img {
 		max-height: 70%;
 		max-width: 70%;
 	}
@@ -230,7 +230,7 @@ main.app {
     	);
 
 		background-size: 300%;
-		background-clip: text;		
+		background-clip: text;
 		color: transparent;
 		background-position: 70% 0%;
 		transition: background-position ease-in-out 1s;
@@ -292,6 +292,13 @@ main.app {
 			&:after { color: $color-yellow--dark; }
 		}
 	}
+    &.text-coming-soon {
+        span {
+            background-image: none;
+            &:after { content: ''; }
+        }
+
+    }
 }
 
 
@@ -317,7 +324,7 @@ main.app {
 .grid-button {
   	&:hover, &:focus {
   		.text-popart span {
-	    	background-size: 100%; 
+	    	background-size: 100%;
 	    	&:after {
 	    		clip-path: polygon(0 0, 110% 0%, 100% 110%, 0% 100%);
 	    	}
@@ -361,7 +368,7 @@ main.app {
 
 		@include responsiveBelow(1025px) {
 			height: 50px;
-			
+
 		}
 	}
 
@@ -444,7 +451,7 @@ main.app {
 		p {margin: 0;}
 
 		&:hover {
-			color: $color-green--dark; 
+			color: $color-green--dark;
 			svg {
 				fill: $color-green--dark;
 			}
@@ -473,8 +480,8 @@ main.app {
 	align-items: center;
 	color: $color-white;
 
-	h6 { 
-		text-align: center; 
+	h6 {
+		text-align: center;
 		@include font-size(20);
 		@include line-height(20);
 	}
@@ -541,7 +548,7 @@ main.app {
 	grid-template-rows: repeat(3, 1fr);
 
 	img { max-height: 60px;	}
-	
+
 	// @include responsiveBelow(1000px) {
 	// 	grid-template-columns: repeat(3, 1fr);
 	// 	grid-template-rows: repeat(4, 1fr);
