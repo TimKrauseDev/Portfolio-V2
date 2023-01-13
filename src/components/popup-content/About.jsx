@@ -10,8 +10,8 @@ const About = () => {
 				<Container className="title-banner">
 					<h1>
 						About.
-						<span className="border-echo--1"></span>     
-						<span className="border-echo--1"></span>     
+						<span className="border-echo--1"></span>
+						<span className="border-echo--1"></span>
 					</h1>
 					<div className="row-flex">
 						<div className="col col-6 mobile-full">
@@ -26,7 +26,7 @@ const About = () => {
 						</div>
 						<div className="col col-6 mobile-full vert-center">
 							<h2>Tim Krause</h2>
-							<p className="lead">Frontend Developer</p>
+							<p className="lead">Full Stack Developer</p>
 							<p><strong>Hi there!</strong> My name is Tim and I am a programmer who loves nothing more than diving into a tough challenge and coming out the other side with a solution. I am always looking for new ways to improve my skills and stay on the cutting edge of technology.</p>
 
 							<p>In my free time, I love traveling and exploring new places. I also enjoy taking photos and spending time at the beach. And when I'm not out and about, you can usually find me curled up on the couch binge-watching my latest TV obsession.</p>
@@ -37,7 +37,7 @@ const About = () => {
 							</div>
 						</div>
 					</div>
-				</Container>   
+				</Container>
 			</section>
 		</>
     );

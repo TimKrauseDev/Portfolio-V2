@@ -14,7 +14,7 @@ const Hero = () => {
 
 		return () => { clearInterval(currentDateInterval) }
 
-	}, []) 
+	}, [])
 
 	return (
 		<div className='hero'>
@@ -34,7 +34,7 @@ const Hero = () => {
 			<div className="hero-content">
 				<p className="text-tag">{"<Hello>"}</p>
 				<h1 className="h2"><span>I'm</span> Tim Krause</h1>
-				<p className="lead">Frontend Developer<br />Based out of Wilmington, NC</p>
+				<p className="lead">Full Stack Developer<br />Based out of Wilmington, NC</p>
 				<p className="text-tag">{"</Hello>"}</p>
 
 			</div>
