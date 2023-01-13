@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 
 import '../styles/App.scss';
 
@@ -36,7 +36,7 @@ function App() {
         <>
             <main className={`app ${isActive ? 'is-active' : ''}`}>
                 <Container grid={true} size='lg'>
-                    <GridButton 
+                    <GridButton
                         version={1}
                         title="About"
                         isPopup={false}
@@ -44,9 +44,9 @@ function App() {
                         <div className="item-wrapper">
                             <Hero />
                         </div>
-                        
+
                     </GridButton>
-                    <GridButton 
+                    <GridButton
                         version={2}
                         title="Other"
                         isPopup={false}
@@ -87,12 +87,12 @@ function App() {
                                 <img src={techImages.postman} alt="postman" />
                             </div>
                             <div className="image-wrapper">
-                                <img src={techImages.stackoverflow} alt="stackoverflow" />                            
+                                <img src={techImages.stackoverflow} alt="stackoverflow" />
                             </div>
                         </div>
                         </div>
                     </GridButton>
-                    <GridButton 
+                    <GridButton
                         version={3}
                         title="Other"
                         isPopup={false}
@@ -101,7 +101,7 @@ function App() {
                             <p className="lead">coming soon.</p>
                         </div>
                     </GridButton>
-                    <GridButton 
+                    <GridButton
                         version={4}
                         title="Other"
                         isPopup={false}
@@ -132,50 +132,57 @@ function App() {
                             </div>
                         </div>
                     </GridButton>
-                    <GridButton 
+                    <GridButton
                         version={5}
                         title="Contact"
                         isPopup={true}
-                        setScaleX={setScaleX} 
-                        setScaleY={setScaleY} 
-                        setTranslateX={setTranslateX} 
-                        setTranslateY={setTranslateY} 
-                        popupRef={popupRef} 
+                        setScaleX={setScaleX}
+                        setScaleY={setScaleY}
+                        setTranslateX={setTranslateX}
+                        setTranslateY={setTranslateY}
+                        popupRef={popupRef}
                         setIsActive={setIsActive}
                         setActiveVersion={setActiveVersion}
                         setActiveTitle={setActiveTitle}
                     >
                         <div className="contact-item-wrapper">
                             <div className="contact-item__title"><span>Contact</span></div>
-                            <CirclePlus />                    
+                            <CirclePlus />
                         </div>
                     </GridButton>
-                    <GridButton 
+                    <GridButton
                         version={7}
                         title="Social Links"
                         isPopup={false}
-                        setScaleX={setScaleX} 
-                        setScaleY={setScaleY} 
-                        setTranslateX={setTranslateX} 
-                        setTranslateY={setTranslateY} 
-                        popupRef={popupRef} 
+                        setScaleX={setScaleX}
+                        setScaleY={setScaleY}
+                        setTranslateX={setTranslateX}
+                        setTranslateY={setTranslateY}
+                        popupRef={popupRef}
                         setIsActive={setIsActive}
                         setActiveVersion={setActiveVersion}
                         setActiveTitle={setActiveTitle}
                     >
-                        <div className="item-wrapper comming-soon">
-                            <p className="lead">coming soon.</p>
+                        <div className="item-wrapper has-padding">
+                            <p className="text-popart text-coming-soon">
+                                <span label="Coming Soon">Coming Soon.</span>
+                            </p>
+                            <div>
+                                <p className="text-tag">{"<Project>"}</p>
+                                <p>New project coming soon.</p>
+                                <p className="text-tag">{"</Project>"}</p>
+                            </div>
                         </div>
                     </GridButton>
-                    <GridButton 
+                    <GridButton
                         version={8}
                         title="Other"
                         isPopup={true}
-                        setScaleX={setScaleX} 
-                        setScaleY={setScaleY} 
-                        setTranslateX={setTranslateX} 
-                        setTranslateY={setTranslateY} 
-                        popupRef={popupRef} 
+                        setScaleX={setScaleX}
+                        setScaleY={setScaleY}
+                        setTranslateX={setTranslateX}
+                        setTranslateY={setTranslateY}
+                        popupRef={popupRef}
                         setIsActive={setIsActive}
                         setActiveVersion={setActiveVersion}
                         setActiveTitle={setActiveTitle}
@@ -183,28 +190,28 @@ function App() {
                         <div className="item-wrapper has-padding center">
                             <p className="text-shadow" >
                                 <span>about.</span>
-                                <span className="border-echo--2"></span>                            
-                                <span className="border-echo--1"></span>                            
-                                <span className="border-echo--1"></span>                            
+                                <span className="border-echo--2"></span>
+                                <span className="border-echo--1"></span>
+                                <span className="border-echo--1"></span>
                             </p>
                         </div>
                     </GridButton>
-                    <GridButton 
+                    <GridButton
                         version={9}
                         title="Messenger"
                         isPopup={true}
-                        setScaleX={setScaleX} 
-                        setScaleY={setScaleY} 
-                        setTranslateX={setTranslateX} 
-                        setTranslateY={setTranslateY} 
-                        popupRef={popupRef} 
+                        setScaleX={setScaleX}
+                        setScaleY={setScaleY}
+                        setTranslateX={setTranslateX}
+                        setTranslateY={setTranslateY}
+                        popupRef={popupRef}
                         setIsActive={setIsActive}
                         setActiveVersion={setActiveVersion}
                         setActiveTitle={setActiveTitle}
                     >
                         <div className="item-wrapper has-padding">
                             <p className="text-popart text-yellow">
-                                <span label="messenger">messenger.</span>                           
+                                <span label="messenger">messenger.</span>
                             </p>
                             <div>
                                 <p className="text-tag">{"<Project>"}</p>
@@ -213,22 +220,22 @@ function App() {
                             </div>
                         </div>
                     </GridButton>
-                    <GridButton 
+                    <GridButton
                         version={10}
                         title="Ecommerce"
                         isPopup={true}
-                        setScaleX={setScaleX} 
-                        setScaleY={setScaleY} 
-                        setTranslateX={setTranslateX} 
-                        setTranslateY={setTranslateY} 
-                        popupRef={popupRef} 
+                        setScaleX={setScaleX}
+                        setScaleY={setScaleY}
+                        setTranslateX={setTranslateX}
+                        setTranslateY={setTranslateY}
+                        popupRef={popupRef}
                         setIsActive={setIsActive}
                         setActiveVersion={setActiveVersion}
                         setActiveTitle={setActiveTitle}
                     >
                         <div className="item-wrapper has-padding">
                             <p className="text-popart">
-                                <span label="ecommerce">ecommerce.</span>                           
+                                <span label="ecommerce">ecommerce.</span>
                             </p>
                             <div>
                                 <p className="text-tag">{"<Project>"}</p>
@@ -237,22 +244,22 @@ function App() {
                             </div>
                         </div>
                     </GridButton>
-                    <GridButton 
+                    <GridButton
                         version={11}
                         title="Sorting Visualizer"
                         isPopup={true}
-                        setScaleX={setScaleX} 
-                        setScaleY={setScaleY} 
-                        setTranslateX={setTranslateX} 
-                        setTranslateY={setTranslateY} 
-                        popupRef={popupRef} 
+                        setScaleX={setScaleX}
+                        setScaleY={setScaleY}
+                        setTranslateX={setTranslateX}
+                        setTranslateY={setTranslateY}
+                        popupRef={popupRef}
                         setIsActive={setIsActive}
                         setActiveVersion={setActiveVersion}
                         setActiveTitle={setActiveTitle}
                     >
                         <div className="item-wrapper has-padding">
                             <p className="text-popart text-orange">
-                                <span label="sorting">sorting.</span>                           
+                                <span label="sorting">sorting.</span>
                             </p>
                             <div>
                                 <p className="text-tag">{"<Project>"}</p>
@@ -265,8 +272,8 @@ function App() {
             </main>
 
             <div ref={popupRef} className={`popup ${isActive ? 'is-active' : ''}`} style={popupStyles}>
-                <Popup 
-                    setIsActive={setIsActive} 
+                <Popup
+                    setIsActive={setIsActive}
                     activeVersion={activeVersion}
                     activeTitle={activeTitle}
                 />
