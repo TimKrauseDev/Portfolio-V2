@@ -11,8 +11,8 @@ const Messenger = () => {
 				<Container className="title-banner">
 					<h1>
 						Messenger.
-						<span className="border-echo--1"></span>     
-						<span className="border-echo--1"></span>     
+						<span className="border-echo--1"></span>
+						<span className="border-echo--1"></span>
 					</h1>
 					<div className="row-flex">
 						<div className="col col-6 mobile-full">
@@ -28,12 +28,12 @@ const Messenger = () => {
 								{overview.description}
 							</p>
 							<div>
-								<a href={overview.liveLink} className="btn">view live</a>
-								<a href={overview.githubLink} className="btn">view code</a>
+								<a href={overview.liveLink} className="btn" target="_blank" rel="noopener noreferrer">view live</a>
+								<a href={overview.githubLink} className="btn" target="_blank" rel="noopener noreferrer">view code</a>
 							</div>
 						</div>
 					</div>
-				</Container>   
+				</Container>
 			</section>
 			<section className="popup-section no-bottom-border">
 				<Container>
