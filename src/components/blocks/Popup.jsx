@@ -2,6 +2,7 @@ import Container from './Container';
 
 import Contact from '../popup-content/Contact';
 import About from '../popup-content/About';
+import UIUX from '../popup-content/UIUX';
 import Ecommerce from '../popup-content/Ecommerce';
 import Sorting from '../popup-content/Sorting';
 import Messenger from '../popup-content/Messenger';
@@ -12,6 +13,7 @@ import LogoBranding from '../../svgs/LogoBranding';
 const handleContentSwitch = (activeVersion) => {
 	switch (activeVersion) {
 		case 5: return <Contact />
+        case 7: return <UIUX />
 		case 8: return <About />
 		case 9: return <Messenger />
 		case 10: return <Ecommerce />
@@ -43,7 +45,7 @@ const Popup = ({ setIsActive, activeVersion, activeTitle }) => {
 	    			<div className="footer-inner footer-inner--left">Created by Tim Krause</div>
 	    			<div className="footer-inner footer-inner--right">Copyright 2023</div>
 	    		</div>
-	    		
+
 	    	</footer>
 	    </div>
     );
