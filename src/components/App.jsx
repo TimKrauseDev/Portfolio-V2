@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 import '../styles/App.scss';
 
@@ -32,6 +32,10 @@ function App() {
     const popupRef = useRef(null);
     const popupStyles = { transform: `translate3d(${translateX},${translateY},0) scale(${scaleX}, ${scaleY})` }
 
+    useEffect(() => {
+        window.history.pushState(null, document.title, window.location.href);
+    }, []);
+
     return (
         <>
             <main className={`app ${isActive ? 'is-active' : ''}`}>
@@ -52,44 +56,44 @@ function App() {
                         isPopup={false}
                     >
                         <div className="item-wrapper has-padding">
-                        <div className="tech-list-wrapper">
-                            <div className="image-wrapper">
-                                <img src={techImages.html} alt="html" />
+                            <div className="tech-list-wrapper">
+                                <div className="image-wrapper">
+                                    <img src={techImages.html} alt="html" />
+                                </div>
+                                <div className="image-wrapper">
+                                    <img src={techImages.css} alt="css" />
+                                </div>
+                                <div className="image-wrapper">
+                                    <img src={techImages.js} alt="js" />
+                                </div>
+                                <div className="image-wrapper">
+                                    <img src={techImages.jquery} alt="jquery" />
+                                </div>
+                                <div className="image-wrapper">
+                                    <img src={techImages.bootstrap} alt="bootstrap" />
+                                </div>
+                                <div className="image-wrapper">
+                                    <img src={techImages.scss} alt="scss" />
+                                </div>
+                                <div className="image-wrapper">
+                                    <img src={techImages.react} alt="react" />
+                                </div>
+                                <div className="image-wrapper">
+                                    <img src={techImages.redux} alt="redux" />
+                                </div>
+                                <div className="image-wrapper">
+                                    <img src={techImages.node} alt="node" />
+                                </div>
+                                <div className="image-wrapper">
+                                    <img src={techImages.mongoDB} alt="mongoDB" />
+                                </div>
+                                <div className="image-wrapper">
+                                    <img src={techImages.postman} alt="postman" />
+                                </div>
+                                <div className="image-wrapper">
+                                    <img src={techImages.stackoverflow} alt="stackoverflow" />
+                                </div>
                             </div>
-                            <div className="image-wrapper">
-                                <img src={techImages.css} alt="css" />
-                            </div>
-                            <div className="image-wrapper">
-                                <img src={techImages.js} alt="js" />
-                            </div>
-                            <div className="image-wrapper">
-                                <img src={techImages.jquery} alt="jquery" />
-                            </div>
-                            <div className="image-wrapper">
-                                <img src={techImages.bootstrap} alt="bootstrap" />
-                            </div>
-                            <div className="image-wrapper">
-                                <img src={techImages.scss} alt="scss" />
-                            </div>
-                            <div className="image-wrapper">
-                                <img src={techImages.react} alt="react" />
-                            </div>
-                            <div className="image-wrapper">
-                                <img src={techImages.redux} alt="redux" />
-                            </div>
-                            <div className="image-wrapper">
-                                <img src={techImages.node} alt="node" />
-                            </div>
-                            <div className="image-wrapper">
-                                <img src={techImages.mongoDB} alt="mongoDB" />
-                            </div>
-                            <div className="image-wrapper">
-                                <img src={techImages.postman} alt="postman" />
-                            </div>
-                            <div className="image-wrapper">
-                                <img src={techImages.stackoverflow} alt="stackoverflow" />
-                            </div>
-                        </div>
                         </div>
                     </GridButton>
                     <GridButton
@@ -152,8 +156,8 @@ function App() {
                     </GridButton>
                     <GridButton
                         version={7}
-                        title="Social Links"
-                        isPopup={false}
+                        title="UI/UX"
+                        isPopup={true}
                         setScaleX={setScaleX}
                         setScaleY={setScaleY}
                         setTranslateX={setTranslateX}
@@ -164,13 +168,13 @@ function App() {
                         setActiveTitle={setActiveTitle}
                     >
                         <div className="item-wrapper has-padding">
-                            <p className="text-popart text-coming-soon">
-                                <span label="Coming Soon">Coming Soon.</span>
+                            <p className="text-popart">
+                                <span label="UI/UX">UI/UX.</span>
                             </p>
                             <div>
-                                <p className="text-tag">{"<Project>"}</p>
-                                <p>New project coming soon.</p>
-                                <p className="text-tag">{"</Project>"}</p>
+                                <p className="text-tag">{"<Projects>"}</p>
+                                <p>Learn more more about some of the completed designs I have done.</p>
+                                <p className="text-tag">{"</Projects>"}</p>
                             </div>
                         </div>
                     </GridButton>
@@ -279,7 +283,7 @@ function App() {
                 />
             </div>
         </>
-  );
+    );
 }
 
 export default App;
