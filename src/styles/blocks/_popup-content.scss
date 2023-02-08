@@ -36,9 +36,6 @@
 
 	.vert-center {
 		margin: auto;
-		// display: flex;
-		// flex-direction: column;
-		// justify-content: center;
 	}
 
 	.row-flex {
@@ -47,54 +44,8 @@
 	}
 }
 
-.marquee-container {
-  height: 30px;
-  overflow: hidden;
-  line-height: 30px;
-  position: relative;
-
-  @include responsive(mobile) {
-  	display: block;
-  }
-
-  .marquee {
-    top: 0;
-    left: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    animation: marquee 30s linear infinite;
-  }
-
-  .marquee2 {
-    animation-delay: 15s;
-  }
-  b {
-    padding-left: 10px;
-  }
-}
-
-@keyframes marquee {
-  0% {
-    left: 100%;
-  }
-  100% {
-    left: -100%
-  }
-}
-
-
-.test-section {
-	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC")
-
-}
-
-#test {
-	position: absolute;
-	top: 0;
-	left: 0;
-
+.projects-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $gap;
 }

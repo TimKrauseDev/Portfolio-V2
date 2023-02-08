@@ -28,7 +28,7 @@ h2, .h2 {
 	@include line-height(58);
 	font-weight: 600;
 }
-h3, .h3 { 
+h3, .h3 {
 	@include font-size(32);
 	@include line-height(40);
 	font-weight: 400;
@@ -61,28 +61,28 @@ b, strong { font-weight: 700; }
 i, em, .em { font-style: italic; }
 
 a {
-	color: $color-green--dark; 
+	color: $color-green--dark;
 	cursor: pointer;
-	outline: 0; 
-	text-decoration: none; 
+	outline: 0;
+	text-decoration: none;
 	font-weight: 900;
 	@include color();
 }
 
 a:hover {
-	outline: 0; 
+	outline: 0;
 	color: $color-purple--dark;
 }
 
-a:active { outline: 0; } 
+a:active { outline: 0; }
 a:focus { @include focus; }
 
 
-p { 
+p {
 	@include font-size(16);;
 	@include line-height(24);
 	margin: 1rem 0 1rem 0;
-	letter-spacing: 0.02rem; 
+	letter-spacing: 0.02rem;
 }
 
 h1,.h1,
@@ -125,4 +125,8 @@ p.lead {
 figcaption {
 	@include font-size(12);
 	@include line-height(20);
+}
+
+li {
+    line-height: 1.5rem;
 }
